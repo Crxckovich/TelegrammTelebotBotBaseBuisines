@@ -37,9 +37,9 @@ def main(message):
   
     # Проверка наличия пользователя в базе данных
     cursor.execute('SELECT * FROM users WHERE id=?', (user_id,))
-    user_exists = cursor.fetchone()
+    user_est = cursor.fetchone()
     
-    if not user_exists:
+    if not user_est:
         # Добавление нового пользователя
         cursor.execute('INSERT INTO users (id, balance) VALUES (?, ?)', (user_id, balance))
 
